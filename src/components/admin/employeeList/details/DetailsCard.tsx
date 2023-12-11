@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import MonthlyBoard from "./MonthlyBoard";
 import DetailsCalendar from "./DetailsCalendar";
+import DailyBoard from "./DailyBoard";
 
 const employeeAbout = {
   name: "Than Htike Zaw",
@@ -81,21 +82,21 @@ const DetailsCard = () => {
           <Button />
         </div>
       </div>
-      <div className="flex items-center justify-between w-full">
+      <div className="grid grid-cols-4 gap-5 w-full">
         {cardItem.map((card) => (
             <div 
             key={card.caption}
-            className="bg-card flex flex-col items-center justify-center gap-4 border border-border rounded-lg px-12 py-4"
+            className="bg-card flex flex-col items-center justify-center gap-4 border border-border rounded-lg px-8 py-4"
             >
                 <p className="text-base">{card.caption}</p>
                 <p className="text-2xl">{card.item}</p>          
             </div>
         ))}
       </div>
-      <div className="flex items-center justify-center w-full">
+      <div className="grid grid-cols-3 gap-4">
             <MonthlyBoard />
             <DetailsCalendar />
-            <div>Dailyboard</div>
+            <DailyBoard />
       </div>
     </div>
   );

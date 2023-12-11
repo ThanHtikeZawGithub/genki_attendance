@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import ResetPassword from './ResetPassword'
 
 const MonthlyBoard = () => {
   return (
@@ -17,7 +16,6 @@ const MonthlyBoard = () => {
       className='absolute bottom-2 right-2'
       >Details</Button>
     </div>
-    <ResetPassword />
     </div>
   )
 }

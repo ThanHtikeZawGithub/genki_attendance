@@ -10,7 +10,7 @@ const DetailsCalendar = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date())
 
   return (
-    <div className="bg-card flex flex-col border border-border rounded-lg space-y-4 p-8">
+    <div className="bg-card flex flex-col border border-border rounded-lg space-y-4 p-4">
     <Calendar
       mode="single"
       selected={date}

@@ -1,8 +1,9 @@
 import React from 'react'
+import ResetPassword from './ResetPassword'
 
 const DailyBoard = () => {
   return (
-    <div className='flex flex-col space-y-12'>
+    <div className='flex flex-col space-y-4'>
       <div className='bg-card border border-border rounded-lg p-8'>
         <h2>Daily Board</h2>
         <div>
@@ -11,6 +12,7 @@ const DailyBoard = () => {
         <p>3. reported to early off for 2 hour</p>
         </div>
       </div>
+      <ResetPassword/>
     </div>
   )
 }
