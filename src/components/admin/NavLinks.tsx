@@ -35,7 +35,7 @@ const links = [
 
 //active style can be changed,for now I just put some random style
 
-export default function NavLinks() {
+export default function NavLinks({close}:any) {
   //we will get the navigation from the params which is pathname
   const pathname = usePathname();
   return (
@@ -53,7 +53,10 @@ export default function NavLinks() {
             )}
           >
             <LinkIcon className="w-6" />
-            <p className="hidden md:block">{link.name}</p>
+            <p className={clsx("hidden md:block",
+            {"md:hidden" : close}
+            )}
+            >{link.name}</p>
           </Link>
         );
       })}
