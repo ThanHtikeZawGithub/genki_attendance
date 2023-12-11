@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link';
 import NavLinks from './admin/NavLinks';
 import {ArrowRightOnRectangleIcon} from '@heroicons/react/24/outline';

@@ -1,5 +1,6 @@
 import Search from "@/components/Search";
 import EmployeeTable from "@/components/admin/employeeList/EmployeeTable";
+import Manual from "@/components/admin/employeeList/Manual";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -11,13 +12,12 @@ const page = () => {
       {/* <div>user</div> */}
       <div className="flex items-center justify-between gap-8">
         <Search placeholder="Search" />
-        <div>filter</div>
-        <Button asChild>
-          <Link href="/admin/employee-list/create" className="flex items-center justify-center gap-2">
+        <Button asChild variant={'secondary'}>
+          <Link href="/admin/employee-list/create" className="flex text-white hover:text-slate-800 items-center justify-center gap-2">
             <PlusIcon className="w-4 h-4"/> Create Employee
           </Link>
         </Button>
-        <div>Manual</div>
+        <Manual />
       </div>
       <EmployeeTable />
     </div>
