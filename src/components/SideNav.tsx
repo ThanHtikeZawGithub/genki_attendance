@@ -13,17 +13,15 @@ import UserBar from "./admin/UserBar";
 export default function SideNav() {
   const [close, setClose] = useState<boolean | null>(false);
   return (
-    <aside className={clsx("w-full flex-none md:w-64 transition-all duration-200",
-    {"md:w-16 transition-all duration-200": close}
+    <aside className={clsx("sticky z-50 h-screen w-full top-0 overflow-hidden md:w-64 transition-all duration-200",
+    {"md:w-16 sticky w-full top-0 transition-all duration-200" : close}
     )}>
     <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-primary text-white">
       <div
         className={clsx("fixed top-0 right-8 left-64 text-black transition-all duration-200", 
-        {
-          "left-16 transition-all duration-200": close,
-        })}
+        {"left-16 fixed top-0 right-8 transition-all duration-200" : close})}
       >
-        <div className="flex items-center justify-between p-1">
+        <div className="flex items-center justify-between p-1 backdrop-blur-sm">
           <button onClick={() => setClose((prev) => !prev)}>
             <XMarkIcon className="w-6 h-6" />
           </button>

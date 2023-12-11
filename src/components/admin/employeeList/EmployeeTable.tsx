@@ -65,6 +65,70 @@ async function getData(): Promise<Employee[]> {
       workStatus: 'On-Site',
       todayRecord: ''
   },
+    {
+      id: '1',
+      name: 'Tun Tun',
+      status: 'active',
+      department: 'Sales Team',
+      workStatus: "On-Site",
+      todayRecord: 'late 30 mins'
+  },
+  {
+      id: '2',
+      name: 'Mg Mg',
+      status: 'break',
+      department: 'Development Team',
+      workStatus: 'WFH',
+      todayRecord: ''
+  },
+  {
+      id: '3',
+      name: 'Aung Aung',
+      status: 'off',
+      department: 'Myanmar Team',
+      workStatus: 'On-Site',
+      todayRecord: ''
+  },
+    {
+      id: '1',
+      name: 'Tun Tun',
+      status: 'active',
+      department: 'Sales Team',
+      workStatus: "On-Site",
+      todayRecord: 'late 30 mins'
+  },
+  {
+      id: '2',
+      name: 'Mg Mg',
+      status: 'break',
+      department: 'Development Team',
+      workStatus: 'WFH',
+      todayRecord: ''
+  },
+  {
+      id: '3',
+      name: 'Aung Aung',
+      status: 'off',
+      department: 'Myanmar Team',
+      workStatus: 'On-Site',
+      todayRecord: ''
+  },
+  {
+      id: '2',
+      name: 'Mg Mg',
+      status: 'break',
+      department: 'Development Team',
+      workStatus: 'WFH',
+      todayRecord: ''
+  },
+  {
+      id: '3',
+      name: 'Aung Aung',
+      status: 'off',
+      department: 'Myanmar Team',
+      workStatus: 'On-Site',
+      todayRecord: ''
+  },
   ]
 }
 
@@ -72,7 +136,7 @@ async function getData(): Promise<Employee[]> {
 const EmployeeTable = async () => {
   const data = await getData();
   return (
-  <div className="container mx-auto py-10">
+  <div className="mx-auto w-full">
     <DataTable columns={columns} data={data} />
   </div>
   )

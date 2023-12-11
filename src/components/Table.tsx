@@ -2,8 +2,10 @@
 
 import {
   ColumnDef,
+  Pagination,
   flexRender,
   getCoreRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 import React from "react";
@@ -15,7 +17,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { PencilIcon } from "@heroicons/react/24/outline";
+import { EyeIcon, PencilIcon } from "@heroicons/react/24/outline";
+import { TablePagination } from "./Pagination";
+import Link from "next/link";
 
 interface TableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -30,12 +34,13 @@ export const DataTable = <TData, TValue>({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
   return (
     <div className="mt-6 flow-root">
       <Table>
         {/* <TableCaption>Table for reusable.</TableCaption> */}
-        <TableHeader>
+        <TableHeader className="bg-gray-200 z-0 w-full text-black">
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
@@ -66,7 +71,12 @@ export const DataTable = <TData, TValue>({
                   </TableCell>
                 ))}
                 <TableCell>
-                  <PencilIcon />
+                  <button className="flex items-center justify-center gap-2">
+                    <Link href={'/admin/employee-list/details'}>
+                        <EyeIcon className="w-4 h-4"/>
+                    </Link>
+                    <PencilIcon className="w-4 h-4"/>
+                  </button>
                 </TableCell>
               </TableRow>
             ))
@@ -79,6 +89,7 @@ export const DataTable = <TData, TValue>({
           )}
         </TableBody>
       </Table>
+      <TablePagination table={table}/>
     </div>
   );
 };

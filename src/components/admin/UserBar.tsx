@@ -16,7 +16,7 @@ import { Label } from "../ui/label";
 
 const UserBar = () => {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-2 z-50">
       <p>Genki Panda</p>
       <Sheet>
         <SheetTrigger>

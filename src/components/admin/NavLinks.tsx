@@ -5,6 +5,8 @@ import {
   TicketIcon,
   BuildingOfficeIcon,
   HomeIcon,
+  ClockIcon,
+  CalendarIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -16,6 +18,14 @@ const links = [
     name: 'Dashboard', 
     href:'/admin', 
     icon: HomeIcon
+  },
+  { name: 'Daily Attendance', 
+    href: '/admin/daily-attendance', 
+    icon: ClockIcon
+  },
+  { name: 'Monthly Attendance', 
+    href: '/admin/monthly-attendance', 
+    icon: CalendarIcon
   },
   { 
     name: 'Employee List', 
@@ -30,7 +40,7 @@ const links = [
   { name: 'Settings', 
     href: '/admin/settings', 
     icon: TicketIcon 
-  }
+},
 ];
 
 //active style can be changed,for now I just put some random style
