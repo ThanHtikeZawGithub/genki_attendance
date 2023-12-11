@@ -2,7 +2,6 @@
 import React from 'react'
 import { ColumnDef } from '@tanstack/react-table';
 import DataTable from '@/components/Table';
-import Link from 'next/link';
 
 type Employee = {
   id:string,
