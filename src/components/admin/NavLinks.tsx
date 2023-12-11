@@ -10,20 +10,33 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-// Map of links to display in the side navigation.
-// Depending on the size of the application, this would be stored in a database.
+//name of the side navigation list
 const links = [
-  { name: 'Dashboard', href:'/admin', icon: HomeIcon},
-  { name: 'Employee List', href: '/admin/employee-list', icon: BuildingOfficeIcon },
+  { 
+    name: 'Dashboard', 
+    href:'/admin', 
+    icon: HomeIcon
+  },
+  { 
+    name: 'Employee List', 
+    href: '/admin/employee-list', 
+    icon: BuildingOfficeIcon 
+  },
   {
     name: 'Department List',
     href: '/admin/department-list',
     icon: UserGroupIcon,
   },
-  { name: 'Settings', href: '/admin/settings', icon: TicketIcon },
+  { name: 'Settings', 
+    href: '/admin/settings', 
+    icon: TicketIcon 
+  }
 ];
 
+//active style can be changed,for now I just put some random style
+
 export default function NavLinks() {
+  //we will get the navigation from the params which is pathname
   const pathname = usePathname();
   return (
     <>
